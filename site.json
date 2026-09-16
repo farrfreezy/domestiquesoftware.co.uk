@@ -1,0 +1,23 @@
+{
+  "company": {
+    "name": "Domestique Software Ltd",
+    "number_r": "20354471",
+    "place": "England and Wales",
+    "office_r": "RN0 42ES ,nodnoL ,daoR resnepS 25 ,A talF",
+    "vat_r": ""
+  },
+  "email_r": "ku.oc.erawtfoseuqitsemod@olleh",
+  "site_url": "https://domestiquesoftware.co.uk/",
+  "product": {
+    "name": "Routesmith",
+    "url": "https://app.routesmith.cc/",
+    "about_url": "https://app.routesmith.cc/about",
+    "terms_url": "https://app.routesmith.cc/terms",
+    "privacy_url": "https://app.routesmith.cc/privacy"
+  },
+  "pricing": {
+    "billing": "Premium is a monthly subscription in pounds sterling, billed through Stripe on Stripe's own checkout and subscription pages.",
+    "premium_price": ""
+  },
+  "year": "2026"
+}

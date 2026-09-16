@@ -1,0 +1,104 @@
+/* Domestique Software Ltd — a plain company page. No web fonts, no
+   scripts beyond the un-reverse at the foot of index.html, nothing fetched
+   from anywhere else. */
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --muted: #5f6368;
+  --rule: #e3e3e3;
+  --link: #1a56db;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --ink: #ededed;
+    --muted: #a0a4a8;
+    --rule: #2c2c2c;
+    --link: #7fa8ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 2rem 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+section {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+main > p:first-of-type + section { border-top: 0; }
+
+p, ul { margin: 0 0 1rem; }
+p:last-child, ul:last-child { margin-bottom: 0; }
+
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.15em;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.company-details { overflow-wrap: anywhere; }
+
+/* The obfuscation's CSS half. The served HTML carries every word of an
+   address reversed; this paints each word the right way round with no
+   script. It must be isolate-override, not plain override: bidi-override
+   inherits the surrounding direction and the words come out reversed. */
+.obf-w {
+  unicode-bidi: isolate-override;
+  direction: rtl;
+}
